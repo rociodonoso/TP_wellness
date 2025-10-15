@@ -1,0 +1,160 @@
+/* === ESTILOS BASE === */
+body {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #f7f6f3;
+  color: #2f3e46;
+}
+
+/* === HERO PRINCIPAL (pantalla de inicio) === */
+.hero {
+  position: relative;
+  background-image: url("../IMG/fondo-index.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #1b4332;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #3d3d3d;
+  font-size: 1.2em;
+  margin-bottom: 35px;
+}
+
+/* === BOTÓN BEIGE AESTHETIC === */
+.btn-beige {
+  background-color: #e6dcc4;
+  color: #1b4332;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-beige:hover {
+  background-color: #d9c9a3;
+  color: #173826;
+  transform: translateY(-2px);
+}
+
+/* === SECCIÓN SERVICIOS === */
+.servicio-card {
+  position: relative;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.servicio-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.servicio-content {
+  position: relative;
+  z-index: 1;
+  color: #1b4332;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.servicio-content h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.servicio-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #2f3e46;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  color: #2f3e46;
+  background-color: #f8f6f1;
+}
+
+footer .volver {
+  color: #1b4332;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+footer .volver:hover {
+  color: #5a7a68;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .servicio-card {
+    height: 250px;
+  }
+
+  .servicio-content h2 {
+    font-size: 1.5em;
+  }
+}
