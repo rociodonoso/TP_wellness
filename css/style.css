@@ -9,7 +9,7 @@ body {
 /* === HERO PRINCIPAL (pantalla de inicio) === */
 .hero {
   position: relative;
-  background-image: url("../IMG/fondo-index.jpg");
+  background-image: url("../img/fondo-index.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
