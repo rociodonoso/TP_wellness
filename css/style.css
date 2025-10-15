@@ -4,6 +4,30 @@ body {
   font-family: "Cormorant Garamond", serif;
   background-color: #f7f6f3;
   color: #2f3e46;
+  padding-top: 80px; /* evita que el header fijo tape el contenido */
+}
+
+/* === NAVBAR === */
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: #264733 !important;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: #264733 !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1b4332 !important;
 }
 
 /* === HERO PRINCIPAL (pantalla de inicio) === */
@@ -12,7 +36,7 @@ body {
   background-image: url("../img/fondo-index.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +92,14 @@ body {
   background-color: #d9c9a3;
   color: #173826;
   transform: translateY(-2px);
+}
+
+.btn-beige:focus,
+.btn-beige:active {
+  background-color: #d9c9a3 !important;
+  color: #173826 !important;
+  outline: none;
+  box-shadow: 0 0 0 0.15rem rgba(217, 201, 163, 0.5);
 }
 
 /* === SECCIÓN SERVICIOS === */

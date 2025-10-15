@@ -17,18 +17,46 @@
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="text-center p-4">
-    <h1>Balance Life</h1>
-    <p>Elegí tu experiencia de bienestar</p>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f8f7f4; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+      <div class="container">
+        <!-- Logo o nombre -->
+        <a class="navbar-brand" href="index.html" style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #264733; font-weight: 600;">
+          Balance Life
+        </a>
+
+        <!-- Botón hamburguesa (versión móvil) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces de navegación -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #264733;">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html" style="color: #264733;">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="turnos.html" style="color: #264733;">Turnos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html" style="color: #264733;">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
+  <!-- SECCIÓN TÍTULO -->
+  <section class="text-center p-4 mt-5">
+    <h1>Balance Life</h1>
+    <p>Elegí tu experiencia de bienestar</p>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="container my-5">
     <section class="row g-4">
 
       <!-- PILATES -->
       <article class="col-md-6">
-        <div class="servicio-card" style="background-image: url('img/pilates.jpg');">
+        <div class="servicio-card" style="background-image: url('IMG/pilates.jpg');">
           <div class="overlay"></div>
           <div class="servicio-content">
             <h2>Pilates</h2>
@@ -40,7 +68,7 @@
 
       <!-- YOGA -->
       <article class="col-md-6">
-        <div class="servicio-card" style="background-image: url('img/yoga.jpg');">
+        <div class="servicio-card" style="background-image: url('IMG/yoga.jpg');">
           <div class="overlay"></div>
           <div class="servicio-content">
             <h2>Yoga</h2>
@@ -52,7 +80,7 @@
 
       <!-- SPA -->
       <article class="col-md-6">
-        <div class="servicio-card" style="background-image: url('img/spa.jpg');">
+        <div class="servicio-card" style="background-image: url('IMG/spa.jpg');">
           <div class="overlay"></div>
           <div class="servicio-content">
             <h2>Spa</h2>
@@ -64,7 +92,7 @@
 
       <!-- DIETÉTICA -->
       <article class="col-md-6">
-        <div class="servicio-card" style="background-image: url('img/dietetica.jpg');">
+        <div class="servicio-card" style="background-image: url('IMG/dietetica.jpg');">
           <div class="overlay"></div>
           <div class="servicio-content">
             <h2>Dietética</h2>
@@ -83,8 +111,10 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center py-3">
-    <a href="index.html" class="volver">← Volver al inicio</a>
+  <footer class="text-center py-3" style="background-color: #f8f6f1; color: #2f3e46;">
+    <a href="index.html" class="volver" style="text-decoration: none; color: #1b4332; font-weight: 600;">
+      ← Volver al inicio
+    </a>
   </footer>
 </body>
 </html>
