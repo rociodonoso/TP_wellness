@@ -1,7 +1,7 @@
 let mensajes = []
 let idMensaje = 0
 
-// --- BOTONES --- //
+// BOTONES
 let botonAgregar = document.getElementById("botonAgregar")
 botonAgregar.addEventListener("click", agregarMensaje)
 botonAgregar.addEventListener("click", obtenerMensajes)
@@ -13,7 +13,7 @@ let botonFiltrar = document.getElementById("botonFiltrar")
 botonFiltrar.addEventListener("click", filtrarPorMotivo)
 
 
-// --- AGREGAR MENSAJE --- //
+// AGREGAR MENSAJE 
 function agregarMensaje() {
   let nombre = document.getElementById("nombreHTML").value
   let email = document.getElementById("emailHTML").value
@@ -42,7 +42,7 @@ function agregarMensaje() {
 }
 
 
-// --- MOSTRAR MENSAJES --- //
+// ¡MOSTRAR MENSAJES
 function obtenerMensajes() {
   let divMensajes = document.getElementById("listaMensajes")
   divMensajes.innerHTML = ""
@@ -70,7 +70,7 @@ function obtenerMensajes() {
 }
 
 
-// --- ELIMINAR MENSAJE --- //
+// ELIMINAR MENSAJE
 function eliminarMensaje() {
   let idABorrar = document.getElementById("idBorrar").value
 
@@ -85,7 +85,7 @@ function eliminarMensaje() {
 }
 
 
-// --- FILTRAR POR MOTIVO --- //
+// FILTRAR POR MOTIVO
 function filtrarPorMotivo() {
   let motivoBuscado = document.getElementById("motivoFiltrar").value
   let mensajesFiltrados = []
