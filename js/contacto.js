@@ -3,7 +3,7 @@
 let mensajes = [];
 let idMensaje = 0;
 
-// ✅ CARGAR MENSAJES GUARDADOS EN LOCALSTORAGE
+// CARGAR MENSAJES GUARDADOS EN LOCALSTORAGE
 document.addEventListener("DOMContentLoaded", () => {
   const guardados = localStorage.getItem("mensajes");
   if (guardados) {
@@ -14,17 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     obtenerMensajes();
   }
+
+  // --- BOTONES --- //
+  let botonAgregar = document.getElementById("botonAgregar");
+  botonAgregar.addEventListener("click", agregarMensaje);
+
+  let botonBorrar = document.getElementById("borrarMensaje");
+  botonBorrar.addEventListener("click", eliminarMensaje);
+
+  let botonFiltrar = document.getElementById("botonFiltrar");
+  botonFiltrar.addEventListener("click", filtrarPorMotivo);
 });
-
-// --- BOTONES --- //
-let botonAgregar = document.getElementById("botonAgregar");
-botonAgregar.addEventListener("click", agregarMensaje);
-
-let botonBorrar = document.getElementById("borrarMensaje");
-botonBorrar.addEventListener("click", eliminarMensaje);
-
-let botonFiltrar = document.getElementById("botonFiltrar");
-botonFiltrar.addEventListener("click", filtrarPorMotivo);
 
 // --- AGREGAR MENSAJE --- //
 function agregarMensaje() {
@@ -38,16 +38,10 @@ function agregarMensaje() {
     return;
   }
 
-  let nuevoMensaje = {
-    id: idMensaje + 1,
-    nombre,
-    email,
-    motivo,
-    mensaje
-  };
-
+  let nuevoMensaje = { id: idMensaje + 1, nombre, email, motivo, mensaje };
   mensajes.push(nuevoMensaje);
   idMensaje++;
+  console.log("Mensaje agregado:", nuevoMensaje);
 
   // Guardar en LocalStorage
   localStorage.setItem("mensajes", JSON.stringify(mensajes));
@@ -71,8 +65,7 @@ function obtenerMensajes() {
   for (let mensaje of mensajes) {
     let item = document.createElement("li");
     item.classList.add("list-group-item");
-    item.textContent =
-      `ID: ${mensaje.id} | Nombre: ${mensaje.nombre} | Email: ${mensaje.email} | Motivo: ${mensaje.motivo} | Mensaje: ${mensaje.mensaje}`;
+    item.textContent = `ID: ${mensaje.id} | ${mensaje.nombre} (${mensaje.email}) | Motivo: ${mensaje.motivo} | Mensaje: ${mensaje.mensaje}`;
     listaHTML.appendChild(item);
   }
 
@@ -118,8 +111,7 @@ function filtrarPorMotivo() {
   for (let mensaje of mensajesFiltrados) {
     let item = document.createElement("li");
     item.classList.add("list-group-item");
-    item.textContent =
-      `ID: ${mensaje.id} | Nombre: ${mensaje.nombre} | Email: ${mensaje.email} | Motivo: ${mensaje.motivo} | Mensaje: ${mensaje.mensaje}`;
+    item.textContent = `ID: ${mensaje.id} | ${mensaje.nombre} (${mensaje.email}) | Motivo: ${mensaje.motivo} | Mensaje: ${mensaje.mensaje}`;
     listaHTML.appendChild(item);
   }
 
