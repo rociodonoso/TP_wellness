@@ -50,62 +50,35 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="container my-5">
+
     <div class="p-4 rounded shadow-sm" style="background-color: #fffaf2;">
-      <div class="container">
-        <h2 class="text-center mb-4" style="font-family: 'Cormorant Garamond', serif; color: #1b4332;">
-          Enviar mensaje
-        </h2>
 
-        <!-- CAMPOS -->
-        <div class="row g-3">
-          <div class="col-md-6">
-            <input type="text" id="nombreHTML" placeholder="Tu nombre" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <input type="text" id="emailHTML" placeholder="Tu email" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <input type="text" id="motivoHTML" placeholder="Motivo" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <textarea id="mensajeHTML" placeholder="Mensaje" class="form-control" rows="2"></textarea>
-          </div>
+      <h2 class="text-center mb-4" style="font-family: 'Cormorant Garamond', serif; color: #1b4332;">
+        Enviar mensaje
+      </h2>
 
-          <div class="col-12 text-center mt-3">
-            <input type="button" value="Enviar mensaje" id="botonAgregar" class="btn btn-beige px-5 py-2 w-50">
-          </div>
-        </div>
+      <!-- CAMPOS -->
+      <input type="text" id="nombreHTML" placeholder="Tu nombre" class="form-control mb-3">
+      <input type="text" id="emailHTML" placeholder="Tu email" class="form-control mb-3">
+      <input type="text" id="motivoHTML" placeholder="Motivo" class="form-control mb-3">
+      <textarea id="mensajeHTML" placeholder="Mensaje" class="form-control mb-3" rows="4"></textarea>
 
-        <hr class="my-5">
+      <input type="button" value="Enviar mensaje" id="botonAgregar" class="btn btn-beige w-100 mb-4">
 
-        <!-- BORRAR MENSAJE -->
-        <div class="row g-3 justify-content-center">
-          <div class="col-md-8">
-            <input type="text" id="idBorrar" placeholder="ID mensaje a borrar" class="form-control">
-          </div>
-          <div class="col-md-4 text-center">
-            <input type="button" value="Borrar mensaje" id="borrarMensaje" class="btn btn-outline-danger w-100">
-          </div>
-        </div>
+      <!-- BORRAR MENSAJE -->
+      <input type="text" id="idBorrar" placeholder="ID mensaje a borrar" class="form-control mb-3">
+      <input type="button" value="Borrar mensaje" id="borrarMensaje" class="btn btn-outline-danger w-100 mb-4">
 
-        <hr class="my-5">
+      <!-- FILTRAR POR MOTIVO -->
+      <input type="text" id="motivoFiltrar" placeholder="Motivo para filtrar" class="form-control mb-3">
+      <input type="button" value="Filtrar por motivo" id="botonFiltrar" class="btn btn-outline-success w-100 mb-4">
 
-        <!-- FILTRAR POR MOTIVO -->
-        <div class="row g-3 justify-content-center">
-          <div class="col-md-8">
-            <input type="text" id="motivoFiltrar" placeholder="Motivo para filtrar" class="form-control">
-          </div>
-          <div class="col-md-4 text-center">
-            <input type="button" value="Filtrar por motivo" id="botonFiltrar" class="btn btn-outline-success w-100">
-          </div>
-        </div>
-
-        <!-- LISTA -->
-        <div id="listaMensajes" class="p-3 bg-white rounded shadow-sm mt-5">
-          <p class="text-muted text-center">Aún no hay mensajes enviados.</p>
-        </div>
+      <!-- LISTA -->
+      <div id="listaMensajes" class="p-3 bg-white rounded shadow-sm">
+        <p class="text-muted text-center">Aún no hay mensajes enviados.</p>
       </div>
     </div>
+
   </main>
 
   <!-- FOOTER -->
@@ -115,6 +88,6 @@
     </a>
   </footer>
 
-  <script src="JS/contacto.js"></script>
+  <script src=js/contacto.js"></script>
 </body>
 </html>
