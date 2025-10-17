@@ -56,9 +56,12 @@
       <h2 class="text-center mb-4" style="color: #1b4332; font-family: 'Cormorant Garamond', serif;">Nuevo turno</h2>
 
       <div class="row g-3">
+        <!-- Nombre -->
         <div class="col-md-6">
           <input type="text" id="nombre" class="form-control" placeholder="Nombre del cliente">
         </div>
+
+        <!-- Servicio -->
         <div class="col-md-6">
           <select id="servicio" class="form-select">
             <option value="">Seleccioná servicio</option>
@@ -68,48 +71,47 @@
             <option value="Nutrición">Nutrición</option>
           </select>
         </div>
+
+        <!-- Profesional -->
         <div class="col-md-6">
-          <input type="date" id="fecha" class="form-control">
+          <select id="profesional" class="form-select">
+            <option value="">Seleccioná un profesional</option>
+          </select>
+          <p id="descripcionProfesional" class="text-muted mt-2" style="min-height: 40px;"></p>
         </div>
-        <div class="col-md-6">
-          <input type="time" id="hora" class="form-control">
+
+        <!-- Día -->
+        <div class="col-md-3">
+          <select id="dia" class="form-select">
+            <option value="">Seleccioná un día</option>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sábado">Sábado</option>
+          </select>
+        </div>
+
+        <!-- Hora -->
+        <div class="col-md-3">
+          <select id="hora" class="form-select">
+            <option value="">Seleccioná un horario</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+          </select>
         </div>
       </div>
 
       <div class="text-center mt-4">
         <input type="button" value="Agregar turno" id="botonAgregar" class="btn btn-beige w-50">
-      </div>
-    </section>
-
-    <hr class="my-5">
-
-    <!-- FILTRAR -->
-    <section class="mb-4">
-      <div class="p-4 rounded shadow-sm" style="background-color: #fffaf2;">
-        <h3 class="text-center mb-3" style="font-family: 'Cormorant Garamond', serif; color: #1b4332;">Filtrar por servicio</h3>
-        <div class="row g-3 justify-content-center">
-          <div class="col-md-8">
-            <input type="text" id="servicioFiltrar" class="form-control" placeholder="Ej: Yoga">
-          </div>
-          <div class="col-md-4 text-center">
-            <input type="button" value="Filtrar" id="botonFiltrar" class="btn btn-outline-success w-100">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ELIMINAR -->
-    <section class="mb-4">
-      <div class="p-4 rounded shadow-sm" style="background-color: #fffaf2;">
-        <h3 class="text-center mb-3" style="font-family: 'Cormorant Garamond', serif; color: #1b4332;">Eliminar turno</h3>
-        <div class="row g-3 justify-content-center">
-          <div class="col-md-8">
-            <input type="text" id="idBorrar" class="form-control" placeholder="ID del turno a eliminar">
-          </div>
-          <div class="col-md-4 text-center">
-            <input type="button" value="Borrar turno" id="borrarTurno" class="btn btn-outline-danger w-100">
-          </div>
-        </div>
       </div>
     </section>
 
