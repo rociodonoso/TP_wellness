@@ -191,19 +191,21 @@ footer .volver:hover {
   }
 }
 
-/* Ajuste para imágenes de las clases */
+/* --- Ajuste para imágenes de las clases  --- */
 .imagen-servicio {
   width: 100%;
-  height: 70vh;              
-  object-fit: cover;         
-  object-position: center;   
+  max-width: 600px;     /* mantiene el ancho que tenías antes */
+  height: auto;         /* conserva proporciones originales */
+  display: block;
+  margin: 0 auto;       /* centra la imagen horizontalmente */
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* En pantallas más chicas (celulares), se achica un poco */
+/* En pantallas más chicas (celulares) */
 @media (max-width: 768px) {
   .imagen-servicio {
-    height: 50vh;            
-    object-position: center top; 
+    max-width: 100%;
+    border-radius: 8px;
   }
 }
