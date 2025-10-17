@@ -190,3 +190,20 @@ footer .volver:hover {
     font-size: 1.5em;
   }
 }
+
+/* Ajuste para imágenes de las clases */
+.imagen-servicio {
+  width: 100%;
+  height: 70vh;              
+  object-fit: cover;         
+  object-position: center;   
+  border-radius: 10px;
+}
+
+/* En pantallas más chicas (celulares), se achica un poco */
+@media (max-width: 768px) {
+  .imagen-servicio {
+    height: 50vh;            
+    object-position: center top; 
+  }
+}
