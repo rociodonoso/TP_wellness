@@ -53,31 +53,36 @@
 
     <!-- FORMULARIO -->
     <section class="p-4 rounded shadow-sm" style="background-color: #fffaf2;">
-      <h2 class="text-center mb-4" style="color: #1b4332; font-family: 'Cormorant Garamond', serif;">Nuevo turno</h2>
+      <div class="container">
+        <h2 class="text-center mb-4" style="color: #1b4332; font-family: 'Cormorant Garamond', serif;">Nuevo turno</h2>
 
-      <div class="row g-3">
-        <div class="col-md-6">
-          <input type="text" id="nombre" class="form-control" placeholder="Nombre del cliente">
-        </div>
-        <div class="col-md-6">
-          <select id="servicio" class="form-select">
-            <option value="">Seleccioná servicio</option>
-            <option value="Yoga">Yoga</option>
-            <option value="Pilates">Pilates</option>
-            <option value="Spa">Spa</option>
-            <option value="Nutrición">Nutrición</option>
-          </select>
-        </div>
-        <div class="col-md-6">
-          <input type="date" id="fecha" class="form-control">
-        </div>
-        <div class="col-md-6">
-          <input type="time" id="hora" class="form-control">
-        </div>
-      </div>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" id="nombre" class="form-control" placeholder="Nombre del cliente">
+          </div>
 
-      <div class="text-center mt-4">
-        <input type="button" value="Agregar turno" id="botonAgregar" class="btn btn-beige w-50">
+          <div class="col-md-6">
+            <select id="servicio" class="form-select">
+              <option value="">Seleccioná servicio</option>
+              <option value="Yoga">Yoga</option>
+              <option value="Pilates">Pilates</option>
+              <option value="Spa">Spa</option>
+              <option value="Nutrición">Nutrición</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <input type="date" id="fecha" class="form-control">
+          </div>
+
+          <div class="col-md-6">
+            <input type="time" id="hora" class="form-control">
+          </div>
+
+          <div class="col-12 text-center mt-4">
+            <input type="button" value="Agregar turno" id="botonAgregar" class="btn btn-beige px-5 py-2">
+          </div>
+        </div>
       </div>
     </section>
 
@@ -132,6 +137,6 @@
   </footer>
 
   <!-- JS -->
-  <script src="js/script.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>
